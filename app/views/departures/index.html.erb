@@ -1,0 +1,35 @@
+<br>
+<br>
+<br>
+<p style="color: green"><%= notice %></p>
+
+<div ng-app="departuresApp" ng-controller="indexCtrl">
+  <table>
+    <thead>
+      <tr>
+        <th>Door</th>
+        <th>Truck</th>
+        <th>Route</th>
+        <th>Loader</th>
+        <th>Loaded</th>
+        <th>Driver</th>
+        <th>Departed</th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+        <tr ng-repeat="departure in departures">
+          <td>{{departure.door}} </td>
+          <td>{{departure.truck}} </td>
+          <td>{{departure.route}} </td>
+          <td>{{departure.loader}} </td>
+          <td>{{departure.loaded_time}} </td>
+          <td>{{departure.driver}} </td>
+          <td>{{departure.confirmed_time}} </td>
+          <td><a href="http://localhost:3000/departures/{{departure.id}}/edit" class="btn btn-primary">Edit</a></td>
+        </tr>
+    </tbody>
+  </table>
+  <script src="/assets/indexCtrl.js"></script>
+</div>

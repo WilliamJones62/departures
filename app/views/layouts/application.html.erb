@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Departures</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="turbolinks-cache-control" content="no-cache">
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+      <div class="global">
+        <div style="position: fixed; top: 0px; width: 100%; height: 4em; background-color: white; z-index: 100;">
+          <%= render 'layouts/header' %>
+        </div>
+        <div style="margin-top: 4.5em;">
+          <%= yield %>
+        </div>
+      </div>
+  </body>
+</html>

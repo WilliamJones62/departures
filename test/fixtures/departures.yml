@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  door: MyString
+  truck: MyString
+  route: MyString
+  loader: MyString
+  driver: MyString
+  loaded: false
+  loaded_time: 2022-07-08 09:55:57
+  confirmed: false
+  confirmed_time: 2022-07-08 09:55:57
+
+two:
+  door: MyString
+  truck: MyString
+  route: MyString
+  loader: MyString
+  driver: MyString
+  loaded: false
+  loaded_time: 2022-07-08 09:55:57
+  confirmed: false
+  confirmed_time: 2022-07-08 09:55:57

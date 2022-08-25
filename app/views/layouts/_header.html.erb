@@ -1,0 +1,11 @@
+<span class="primary-logo">
+</span>
+<h1 class="title">Departures</h1>
+
+<div id="navbar">
+  <span><%= link_to 'List', departures_path, class: "btn btn-primary" %></span>
+  <span><%= link_to 'New Departure', new_departure_path, class: "btn btn-primary" %></span>
+</div>
+<%= content_tag(:div, flash[:error], :id => "flash_error") if flash[:error] %>
+<%= content_tag(:div, flash[:alert], :id => "flash_alert") if flash[:alert] %>
+<br>

@@ -1,0 +1,56 @@
+<%= form_with(model: departure) do |form| %>
+  <% if departure.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(departure.errors.count, "error") %> prohibited this departure from being saved:</h2>
+
+      <ul>
+        <% departure.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <table>
+    <thead>
+      <tr>
+        <th> <%= form.label :door %> </th>
+        <th> <%= form.label :truck %> </th>
+        <th> <%= form.label :route %> </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td> <%= form.text_field :door %> </td>
+        <td> <%= form.text_field :truck %> </td>
+        <td> <%= form.text_field :route %> </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table>
+    <thead>
+      <tr>
+        <th> <%= form.label :loader %> </th>
+        <th> <%= form.label :loaded %> </th>
+        <th> <%= form.label :driver %> </th>
+        <th> <%= form.label :confirmed %> </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td> <%= form.text_field :loader %> </td>
+        <td> <%= form.check_box :loaded %> </td>
+        <td> <%= form.text_field :driver %> </td>
+        <% if @departure.loaded %>
+          <td> <%= form.check_box :confirmed %> </td>
+        <% else %>
+          <td style="display:none;"> <%= form.check_box :confirmed %> </td>
+        <% end %>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
